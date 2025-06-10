@@ -12,9 +12,12 @@ const ContactForm = () => {
     });
 
     const handleSubmit = async()=>{
-        if(info.name=='' || info.email=='' || info.subject=='' || info.message=='') return;
+        if(info.name=='' || info.email=='' || info.subject=='' || info.message=='') {
+            toast.error('You must fill all the fields');
+            return;
+        }
         try{
-            const respose = await fetch('http://localhost:5000/apk/send-email',{
+            const respose = await fetch('/apk/sendEmail',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
