@@ -10,7 +10,7 @@ fastify.register(require('@fastify/cors'),{
     origin: true
 });
 
-fastify.register(handleRoutes,{prefix: '/apk'});
+fastify.register(handleRoutes,{prefix: '/api'});
 
 const start = async()=>{
     try{

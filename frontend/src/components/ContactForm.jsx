@@ -17,7 +17,7 @@ const ContactForm = () => {
             return;
         }
         try{
-            const respose = await fetch('/apk/sendEmail',{
+            const respose = await fetch('/api/sendEmail',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
