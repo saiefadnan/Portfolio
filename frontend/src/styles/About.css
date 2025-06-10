@@ -1,0 +1,47 @@
+.about{
+    width: 100%;
+    margin: 3rem 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about .left{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: 350px;
+}
+.about .left p{
+    text-align: center;
+    margin: 1.2rem 0;
+}
+
+.img-container{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    text-align: center;
+}
+
+.about .right img{
+    width: 90%;
+    border: 1px solid #333;
+}
+
+.about .right .top{
+    padding-top: 20%;
+    z-index: 6;
+    grid-column: 1/span 8;
+    grid-row: 1;
+}
+
+.about .right .bottom{
+    z-index: 5;
+    grid-column: 4/-1;
+    grid-row: 1;
+}
