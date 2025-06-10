@@ -1,5 +1,5 @@
 import Heroimg1 from "../components/Heroimg1";
-import project from "../ProjectAssets/project.jpg";
+import project from "../projectAssets/project.jpg";
 import PricingCards from "../components/PricingCards";
 import ProjectCards from "../components/ProjectCards";
 
