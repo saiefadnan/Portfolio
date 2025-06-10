@@ -1,6 +1,4 @@
 import '../styles/ProjectCards.css'
-import image from '../assets/Adevan.png'
-import { NavLink } from 'react-router-dom';
 import ProjectData from './ProjectData';
 import ProCard from './ProCard';
 const ProjectCards = () => {

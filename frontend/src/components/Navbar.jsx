@@ -22,7 +22,7 @@ const Navbar = () => {
   },[])
   return ( 
   <div className={color? `header header-bg`:`header`}>
-      <Link to='/portfolio'>
+      <Link to='/home'>
         <div className="logo-container">
           <img src={logo} alt='logo' style={{height: '40px',width: '40px'}}></img>
           <h1>Portfolio</h1>
