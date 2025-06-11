@@ -67,4 +67,7 @@
     .hero .content{
         top: 55%;
     }
+    .content .btn{
+        margin: 1rem .5rem;
+    }
 }

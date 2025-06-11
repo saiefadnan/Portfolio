@@ -53,3 +53,15 @@
 .card:hover{
     background-color: #141414;
 }
+
+
+@media screen and (max-width:450px) {
+    .pricing{
+        padding: 6rem 0;
+    }
+    .card{
+        min-width: 0;
+        width: 95%;
+        padding: 0;
+    }
+}

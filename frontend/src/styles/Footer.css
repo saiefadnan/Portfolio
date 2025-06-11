@@ -24,6 +24,7 @@
     display: flex;
     align-items: baseline;
     margin-bottom: 1rem;
+    min-width: 300px;
 }
 
 .location p{
@@ -46,5 +47,8 @@ p{
 @media screen and (max-width: 600px){
     .footer-container{
         grid-template-columns: 1fr;
+    }
+    .footer-container .left, .footer-container .right{
+        padding: .5rem;
     }
 }

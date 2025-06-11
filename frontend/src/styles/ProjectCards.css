@@ -13,6 +13,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 40px;
+    
 }
 
 .project-card{
@@ -38,8 +39,9 @@
     max-height: 300px;
 }
 
+
 .pro-btns {
-    gap: 110px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,4 +53,10 @@
     font-size: 1.1rem;
     text-align: justify;
     overflow-wrap: break-word;
+}
+
+@media screen and (max-width:450px) {
+    .project-card{
+        width: 100%;
+    }
 }
