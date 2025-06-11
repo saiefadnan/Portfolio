@@ -27,7 +27,7 @@ export default async function sendEmail(req, res) {
             from: `"${name}" <${email}>`,
             to: EMAIL,
             subject: subject, 
-            text: `${text}\n\n-${email}`
+            text: `${text}\n\n- ${email}`
         });
         //console.log(req.body);
         res.status(200).json({success: true,id: info.messageId});

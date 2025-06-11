@@ -11,9 +11,17 @@ const ContactForm = () => {
         message:''
     });
 
+    const isValidEmail = (email) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
     const handleSubmit = async()=>{
-        if(info.name=='' || info.email=='' || info.subject=='' || info.message=='') {
+        if(info.name.trim()=='' || info.email.trim()=='' || info.subject.trim()=='' || info.message.trim()=='') {
             toast.error('You must fill all the fields');
+            return;
+        }
+        if(!isValidEmail(info.email)){
+            toast.error('Please enter a valid email');
             return;
         }
         try{
@@ -48,7 +56,7 @@ const ContactForm = () => {
             <label>Your name</label>
             <input type="text" onChange={(e)=>{setInfo({...info, name:e.target.value})}}/>
             <label>Email</label>
-            <input type="text" onChange={(e)=>{setInfo({...info, email:e.target.value})}}/>
+            <input type="email" onChange={(e)=>{setInfo({...info, email:e.target.value})}}/>
             <label>Subject</label>
             <input type="text" onChange={(e)=>{setInfo({...info, subject:e.target.value})}}/>
             <label>Message</label>
