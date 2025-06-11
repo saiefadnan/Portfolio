@@ -17,7 +17,7 @@ const ContactForm = () => {
             return;
         }
         try{
-            const respose = await fetch('/api/sendEmail',{//serverless function setup for vercel
+            const respose = await fetch('/frontend/api/sendEmail',{ //serverless function setup for vercel
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
