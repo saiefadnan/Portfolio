@@ -21,7 +21,7 @@ const ProjectData = [
     {
         imgsrc: weathertap,
         title: 'Weather-Tap',
-        text:'Search by city names, get weather forecast updates upto next 7 days, save records to get immediate access',
+        text:'Search by city names, get weather forecast updates upto next 7 days, save records to get immediate access.',
         view:'https://qrco.de/bg3VzI',
         source: 'https://github.com/saiefadnan/Weather-Tap' 
     },
