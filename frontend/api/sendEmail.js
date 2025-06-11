@@ -26,9 +26,9 @@ export default async function sendEmail(req, res) {
             text: `${text}\n\n-${email}`
         });
         //console.log(req.body);
-        res.status(200).send({success: true,id: info.messageId});
+        res.status(200).json({success: true,id: info.messageId});
     }catch(err){
         console.error(err);
-        res.status(500).send({success: false,error: err.message});
+        res.status(500).json({success: false,error: err.message});
     }
 }

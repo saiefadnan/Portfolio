@@ -31,7 +31,13 @@ const ContactForm = () => {
             });
             const data = await respose.json();
             // console.log(data.success);
-            data.success?toast.success('Message sent!'):toast.error('Unexpected error occured');
+            if(data.success){
+                toast.success('Message sent!');
+                setInfo({name:'',email:'',subject:'',message:''});
+            }else{
+                toast.error('Unexpected error occured');
+            }
+            
         }catch(err){
             console.error(err.message);
         }
