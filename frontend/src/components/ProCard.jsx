@@ -9,8 +9,8 @@ const ProCard = ({props}) => {
             <p>{props.text}</p>
         </div>
         <div className="pro-btns">
-            <NavLink to={props.view} className='btn'>View</NavLink>
-            <NavLink to={props.source} className='btn'>Source</NavLink>
+        <a href={props.view} target="_blank" rel="noopener noreferrer" className="btn">View</a>
+        <a href={props.source} target="_blank" rel="noopener noreferrer" className="btn">Source</a>
         </div>
     </div> 
 );
