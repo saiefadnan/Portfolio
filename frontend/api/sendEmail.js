@@ -1,6 +1,10 @@
 import nodemailer from 'nodemailer';
+const EMAIL = process.env.VITE_EMAIL;
+const PASSWORD = process.env.VITE_PASSWORD;
+
 
 export default async function sendEmail(req, res) {
+    console.log(EMAIL);
     if (req.method !== 'POST') {
         return res.status(405).send({ error: 'Only POST method is allowed' });
     }
@@ -14,14 +18,14 @@ export default async function sendEmail(req, res) {
         const transport = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD
+                user: EMAIL,
+                pass: PASSWORD
             }
         });
 
         const info = await transport.sendMail({
             from: `"${name}" <${email}>`,
-            to: process.env.EMAIL,
+            to: EMAIL,
             subject: subject, 
             text: `${text}\n\n-${email}`
         });

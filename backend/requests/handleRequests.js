@@ -1,6 +1,4 @@
 const nodemailer = require('nodemailer');
-const EMAIL = import.meta.env.VITE_EMAIL;
-const PASSWORD = import.meta.env.VITE_PASSWORD;
 
 const sendEmail = async(req, res)=>{
     try{
@@ -13,14 +11,14 @@ const sendEmail = async(req, res)=>{
         const transport = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: EMAIL,
-                pass: PASSWORD
+                user: process.env.EMAIL,
+                pass: process.env.PASSWORD
             }
         });
 
         const info = await transport.sendMail({
             from: `"${name}" <${email}>`,
-            to: EMAIL,
+            to: process.env.EMAIL,
             subject: subject, 
             text: `${text}\n\n-${email}`
         });
